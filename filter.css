@@ -1,0 +1,46 @@
+body {
+  background-color: #fff;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+body .container .box {
+  background-color: rgb(232, 232, 232);
+  width: 70%;
+  border-radius: 24px;
+}
+body .container .box ul {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+body .container .box ul li {
+  list-style-type: none;
+  margin-right: 24px;
+  font-size: 30px;
+  text-transform: capitalize;
+  padding: 5px 18px;
+  transition: 0.4s;
+}
+body .container .box ul li:hover {
+  background-color: rgba(0, 0, 0, 0.579);
+  color: white;
+}
+body .container .box .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .container .box .list figure {
+  margin: 10px;
+}
+body .container .box .list figure > img {
+  display: flex;
+  width: 200px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}/*# sourceMappingURL=filter.css.map */

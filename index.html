@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="filter.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <ul>
+                <li data-title="all">all</li>
+                <li data-title="women">women</li>
+                <li data-title="man">man</li>
+            </ul>
+            <div class="list">
+                <figure data-data="women">
+                    <img src="img/1.jpeg" alt="">
+                </figure>
+                <figure data-data="women">
+                    <img src="img/2.jpeg" alt="">
+                </figure>
+                <figure data-data="women">
+                    <img src="img/3.jpeg" alt="">
+                </figure>
+                <figure data-data="women">
+                    <img src="img/4.jpeg" alt="">
+                </figure>
+                <figure data-data="man">
+                    <img src="img/5.jpeg" alt="">
+                </figure>
+                <figure data-data="man">
+                    <img src="img/6.jpeg" alt="">
+                </figure>
+                <figure data-data="man">
+                    <img src="img/7.jpeg" alt="">
+                </figure>
+                <figure data-data="man">
+                    <img src="img/8.jpeg" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let _figs = document.querySelectorAll('.list figure')
+    let _select = document.querySelectorAll('ul>li')
+
+
+    _select.forEach((val)=>{
+        val.addEventListener('click', ()=>{
+            let _ttl = val.getAttribute('data-title');
+        
+
+            _figschecker(_ttl)
+        })
+    })
+
+    function _figschecker(_ttl){
+        _figs.forEach((val)=>{
+            if(((val.getAttribute('data-data')) == _ttl) || (_ttl =='all')){
+                val.style.display='flex'
+            }
+            else{
+                val.style.display='none';
+            }
+        })
+    }
+</script>
+</html>
